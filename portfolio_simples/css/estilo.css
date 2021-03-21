@@ -1,0 +1,49 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html,body {height: 100%;}
+
+div.box_flex {display: flex; flex-wrap: wrap;  height: 100%; text-align: center;}
+
+/*aside */
+aside {width: 20%; background: rgb(46, 45, 44); border-right: 1px solid aquamarine;}
+
+aside div.box_img {max-width: 200px; height: 200px; display: inline-block; position: relative; top: 100px;}
+aside div.box_img img {width: 100%; border: 5px solid rgba(127, 255, 0, 0.6); border-radius: 50%; transition: 1s;}
+aside div.box_img img:hover {border: 5px solid rgb(128, 255, 0);}
+
+aside nav {position: relative; top: 140px; background: rgb(129, 96, 72);}
+aside nav li {padding: 15px 0; list-style: none;}
+aside nav li a {display: block; font-size: 18pt; text-decoration: none; color: white;}
+aside nav li a:hover {color: rgb(197, 192, 192);}
+
+/* section */
+section {width: 80%; background: rgb(255, 255, 255); overflow: hidden;}
+section div.box_conteudo {margin: 150px 20px; padding: 20px; text-align: left;}
+section div.box_conteudo h1 {font-size: 30pt; font-style: italic; color: rgb(29, 31, 31);}
+section div.box_conteudo b {color: rgb(48, 58, 54);}
+section div.box_conteudo address {margin: 30px 0; font-size: 17pt; color: rgb(82, 95, 91); }
+section div.box_conteudo p {max-width: 900px; margin-top: 40px; font-size: 13pt; color: rgb(138, 132, 132);line-height: 20px;}
+
+section div.box_conteudo div.media {margin-top: 30px;}
+section div.box_conteudo div.media a {font-size: 28pt; padding: 0 10px; display: inline-block;}
+section div.box_conteudo div.media a#face {color: rgb(0, 0, 255);}
+section div.box_conteudo div.media a#github {color: rgb(51, 45, 45);} 
+section div.box_conteudo div.media a#youtube {color: rgb(255, 0, 0);}
+
+@media (max-width: 1024px) {
+    aside {width: 40%;}
+    section {width: 60%;}
+
+   
+    section div.box_conteudo div.media {text-align: center;}
+}
+
+@media (max-width: 768px) {
+    aside {width: 100%;}
+    section {width: 100%;}
+
+    aside div.box_img {top: 20px;}
+    aside nav {top: 70px;}
+
+    section div.box_conteudo h1 {text-align: center;}
+    section div.box_conteudo div.media {text-align: center;}
+}
